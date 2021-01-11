@@ -1,0 +1,269 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<!--Start rev slider wrapper-->
+<section class="rev_slider_wrapper">
+    <div id="slider1" class="rev_slider" data-version="5.0">
+        <ul>
+            <li data-transition="fade">
+                <img src="{% static 'images/slider/3.jpg' %}" alt="" width="1920" height="700"
+                    data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1">
+
+                <div class="tp-caption  tp-resizeme" data-x="left" data-hoffset="60" data-y="top" data-voffset="170"
+                    data-transform_idle="o:1;"
+                    data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;"
+                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                    data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-splitin="none" data-splitout="none"
+                    data-responsive_offset="on" data-start="700">
+                    <div class="slide-content-box">
+                        <h1>Training and Quanlity Seed boosts Shrimp <br> Production in Bangladesh. </h1>
+                    </div>
+
+                </div>
+
+            </li>
+            <li data-transition="fade">
+                <img src="{% static 'images/slider/6.jpg' %}" alt="" width="1920" height="700"
+                    data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1">
+
+                <div class="tp-caption  tp-resizeme" data-x="left" data-hoffset="60" data-y="top" data-voffset="170"
+                    data-transform_idle="o:1;"
+                    data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;"
+                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                    data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-splitin="none" data-splitout="none"
+                    data-responsive_offset="on" data-start="700">
+                    <div class="slide-content-box">
+                        <h1>Training and Quality Seed boosts Shrimp <br> Production in Bangladesh. </h1>
+                    </div>
+                </div>
+
+
+            </li>
+            <li data-transition="fade">
+                <img src="{% static 'images/slider/8.jpg' %}" alt="" width="1920" height="700"
+                    data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1">
+
+                <div class="tp-caption  tp-resizeme" data-x="left" data-hoffset="60" data-y="top" data-voffset="170"
+                    data-transform_idle="o:1;"
+                    data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;"
+                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                    data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-splitin="none" data-splitout="none"
+                    data-responsive_offset="on" data-start="700">
+                    <div class="slide-content-box">
+                        <h1>Training and Quanlity Seed boosts Shrimp <br> Production in Bangladesh. </h1>
+                    </div>
+
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</section>
+<!--End rev slider wrapper-->
+
+
+
+<!--Intro Style One-->
+<section class="about extended">
+    <div class="container">
+        <div class="row clearfix">
+            <!--Featured Style One -->
+            <div class="column bigger-column col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="inner">
+                    <div class="section-title">
+                        <h2>ABOUT US</h2>
+                    </div>
+                    <div class="text">
+                        <p>Travelled down the road and back again. Your heart is true you're a pal confidant.
+                            That this group would somehow form a family that's the way we all it takes diff'rent
+                            strokes to move the world. All of them had hair of gold like their mother the
+                            youngest one in curls! </p>
+                        <p>We also provide the design and installation of many landscape construction projects
+                            including walkways, steps, retaining walls, patios, veneer stone,planting,
+                            trans-planting, drainage systems. Travelled down the road and back again. Your heart
+                            is true you're a pal confidant. That this group would somehow form a family that's
+                            the way we all it takes! </p>
+                    </div>
+                    <a href="service-single.html" class="read-more">view all services <span
+                            class="fas fa-caret-right"></span></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-xs-12">
+                <div class="about-carousel">
+                    <!--Featured Style One -->
+
+                    {% for about in abouts %}
+                    <div class="column">
+                        <div class="featured-style-one">
+                            <div class="inner-box wow fadeIn" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                <figure class="image-box"><a href="#"><img src="{{ about.image.url }}" alt=""
+                                            style="height: 200px; width: auto;"></a></figure>
+                                <div class="lower-content">
+                                    <h3><a href="service-single.html">{{ about.name }}</a></h3>
+                                    <div class="text">
+                                        <p>{{about.discription|slice:":80"|safe}}.</p>
+                                    </div>
+                                    <a href="service-single.html" class="read-more">Read More <span
+                                            class="fas fa-long-arrow-alt-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="latest-project text-center">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Our Products</h2>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum. Perspiciatis unde omnis iste natus error sit.</p>
+        </div><!-- /.sec-title -->
+
+        <div class="row masonary-layout filter-layout" style="position: relative; height: 990px;">
+
+            {% for product in products %}
+            <div class="col-md-4 col-sm-6 col-xs-12 filter-item" style="position: absolute; left: 0px; top: 0px;">
+                <div class="single-gallery">
+                    <div class="img-box">
+                        <img src="{{ product.image.url }}" alt="Awesome Image" style="height: 270px; width: auto;">
+                        <div class="overlay">
+                            <div class="inner">
+                                <div class="social">
+                                    <li><a href="{{ product.image.url }}" data-fancybox-group="example-gallery"
+                                            class="view lightbox-image"><span class="flaticon-add"></span></a>
+                                    </li>
+                                    <li><a href="#"><i class="flaticon-unlink"></i></a></li>
+                                    <div>
+                                        <h5 style="margin-top: 30px; font-weight: 400;">{{product.item_name}}
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div><!-- /.row -->
+        <br>
+    </div><!-- /.container -->
+</section>
+
+
+<section class="service-box-one" style="margin-bottom: 20px;">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Our Service's</h2>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum. Perspiciatis unde omnis iste natus error sit.</p>
+        </div><!-- /.sec-title -->
+        <div class="row">
+            <div class="col-md-4 column">
+                <div class="single-service text-center">
+                    <div class="srevice-text" style="height: 220px;">
+                        <a href="#" style="margin-top: 25px;">
+                            <h2>Our Responsibility</h2>
+                        </a>
+                        <p style="text-align: justify; margin-top: 8px;">There are many variations of passages of Lorem
+                            Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour don't look even slightly
+                            believable. by injected humour don't look even slightly by injected humour don't look even
+                            slightly </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 column">
+                <div class="single-service text-center">
+                    <div class="srevice-text" style="height: 220px;">
+                        <a href="#" style="margin-top: 20px;">
+                            <h2>Our Inspection </h2>
+                        </a>
+                        <p style="text-align: justify; margin-top: 8px;">There are many variations of passages of Lorem
+                            Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour don't look even slightly
+                            believable. by injected humour don't look even slightly by injected humour don't look even
+                            slightly </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 column">
+                <div class="single-service text-center">
+                    <div class="srevice-text" style="height: 220px;">
+                        <a href="#" style="margin-top: 20px;">
+                            <h2>Quality Control</h2>
+                        </a>
+                        <p style="text-align: justify; margin-top: 8px;">There are many variations of passages of Lorem Ipsum available,
+                            but the majority have
+                            suffered alteration in some form, by injected humour don't look even slightly
+                            believable. by injected humour don't look even slightly by injected humour don't look even
+                            slightly </p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+
+
+
+<section class="latest-project text-center">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Our Certification</h2>
+
+        </div><!-- /.sec-title -->
+
+
+        <div class="row masonary-layout filter-layout" style="position: relative; height: 990px;">
+
+            {% for certificate in certifications %}
+                <div class="col-md-3 col-sm-6 col-xs-12 filter-item" style="position: absolute; left: 0px; top: 0px;">
+                    <div class="single-gallery">
+                        <div class="img-box">
+                            <img src="{{ certificate.image.url }}" alt="Awesome Image"
+                                style="height: 286px; width: auto;">
+                            <div class="overlay">
+                                <div class="inner">
+                                    <div class="social">
+                                        <li><a href="{{ certificate.image.url }}"
+                                                data-fancybox-group="example-gallery" class="view lightbox-image"><span
+                                                    class="flaticon-add"></span></a>
+                                        </li>
+                                        <li><a href="#"><i class="flaticon-unlink"></i></a></li>
+                                        <div>
+                                            <h4 style="margin-top: 30px;">{{ certificate.name }}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+
+          
+        </div>
+
+    </div><!-- /.row -->
+
+    </div><!-- /.container -->
+</section>
+
+
+{% endblock %}

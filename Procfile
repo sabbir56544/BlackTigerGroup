@@ -1,0 +1,1 @@
+web:gunicorn fishmanagment.wsgi
